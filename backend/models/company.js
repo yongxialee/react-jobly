@@ -97,6 +97,9 @@ class Company {
     query += " ORDER BY name";
     const companiesRes = await db.query(query, queryValues);
     return companiesRes.rows;
+
+    // ELECT handle,name,description,num_employees AS "numEmployees",logo_url AS "logoUrl"FROM companies 
+    //WHERE [name] 
   }
 
   /** Given a company handle, return data about company.
